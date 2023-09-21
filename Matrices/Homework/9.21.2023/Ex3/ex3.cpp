@@ -17,12 +17,7 @@ int main()
             fin >> v[i][j];
         }
     }
-
-    int prod=1;
     
-    for(int i=0; i<n; i++)
-    {
-        prod *= v[i][n-1-i];
-    }
-    cout << prod;
+    int sum = (n % 2 == 0) ? v[n/2-1][(n/2)-1]+v[n/2-1][n/2] : v[n/2-1][n/2];
+    cout << sum;
 }
