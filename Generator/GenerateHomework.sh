@@ -5,7 +5,7 @@ if [ $# -lt 1 ]; then
     echo "Usage: $0 <exercise_number>"
     exit 1
 fi
-
+ 
 # Exercise number argument provided
 exercise_number="$1"
 
