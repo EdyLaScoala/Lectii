@@ -22,7 +22,7 @@ current_month=$(date +"%b" | tr '[:lower:]' '[:upper:]')
 current_date=$(date +"%d.%m.%y")
 
 # Define the directory name based on the year, month, and date
-year_month_date_directory="Matrices/Exercises/$current_year/$current_month/$current_date"
+year_month_date_directory="Matrices/Homework/$current_year/$current_month/$current_date"
 
 # Check if the directory exists, create it if needed with sudo
 if [ ! -d "$year_month_date_directory" ]; then
