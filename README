@@ -1,0 +1,6 @@
+<h2>Generator usage:</h2>
+<p>
+  make ex - create a classwork exercise
+  make hw - create a homework exercise
+  You will be prompted with entering an exercise number, the folders will be automatically generated for you
+</p>
