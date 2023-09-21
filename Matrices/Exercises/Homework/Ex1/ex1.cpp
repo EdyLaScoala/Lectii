@@ -3,28 +3,26 @@
 
 using namespace std;
 
+ifstream fin("data.txt");
+
 int main()
 {
     int n;
-    cin >> n;
+    fin >> n;
     int v[n][n];
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
         {
-            cin >> v[i][j];
+            fin >> v[i][j];
         }
     }
 
-
+    int sum=0;
     
     for(int i=0; i<n; i++)
     {
-        for(int j=0; j<n; j++)
-        {
-            cout << v[i][j] << " ";
-        }
-        cout << endl;
+        sum += v[i][i];
     }
-    return 0;
+    cout << sum;
 }
