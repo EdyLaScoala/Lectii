@@ -1,15 +1,22 @@
-# Makefile for generating the current date
+# Makefile for generating the current date and exercise folder
 
 # Set the path to the Generator folder
-GENERATOR_DIR := Generator
+GENERATOR_DIR := Matrices/Exercises
+
+HW_GENERATOR_DIR := Matrices/Homework
 
 # The name of the script file
 SCRIPT := GenerateExercise.sh
 
-# Make the script executable
-GenerateExercise: $(GENERATOR_DIR)/$(SCRIPT)
+date_script: $(GENERATOR_DIR)/$(SCRIPT)
 	chmod +x $(GENERATOR_DIR)/$(SCRIPT)
+	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
+	$(GENERATOR_DIR)/$(SCRIPT) $$EXERCISE_NUMBER
 
-# Run the script
-run:
-	$(GENERATOR_DIR)/$(SCRIPT)
+ex:
+	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
+	$(GENERATOR_DIR)/$(SCRIPT) "$$EXERCISE_NUMBER"
+
+hw:
+	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
+	$(GENERATOR_DIR)/$(SCRIPT) "$$EXERCISE_NUMBER"
