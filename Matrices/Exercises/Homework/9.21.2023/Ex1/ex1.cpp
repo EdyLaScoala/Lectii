@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ifstream fin("data.txt");
+ifstream fin("../data.txt");
 
 int main()
 {
@@ -18,11 +18,11 @@ int main()
         }
     }
 
-    int prod=0;
+    int sum=0;
     
     for(int i=0; i<n; i++)
     {
-        prod *= v[n-i][n-i];
+        sum += v[i][i];
     }
-    cout << prod;
+    cout << sum;
 }
