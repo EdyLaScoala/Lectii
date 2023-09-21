@@ -19,8 +19,8 @@ date_script: $(GENERATOR_DIR)/$(SCRIPT)
 
 ex:
 	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
-	$(GENERATOR_DIR)/$(EX_SCRIPT) "$$EXERCISE_NUMBER" "$$EX_GENERATOR_DIR"
+	$(GENERATOR_DIR)/$(EX_SCRIPT) "$$EXERCISE_NUMBER"
 
 hw:
 	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
-	$(GENERATOR_DIR)/$(HW_SCRIPT) "$$EXERCISE_NUMBER" "$$HW_GENERATOR_DIR"
+	$(GENERATOR_DIR)/$(HW_SCRIPT) "$$EXERCISE_NUMBER"
