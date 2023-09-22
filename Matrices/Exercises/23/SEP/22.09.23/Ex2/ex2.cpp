@@ -15,12 +15,14 @@ int main()
     {        
         for(int j=0; j<n; j++)
         {
-            if (i == 0 || i == m || j == 0 || j == m)
+            if ((i == 0 || i == m-1) || (j == 0 || j == m))
             {
                 v[i][j] = 0;
             }
             else
-            fin >> v[i][j];
+            {
+                fin >> v[i][j];
+            }
         }
     }
 
