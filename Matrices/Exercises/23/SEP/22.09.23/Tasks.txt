@@ -1,3 +1,5 @@
 1. Se da o matrice cu n linii si m coloane. Sa se interschimbe: 
     a) liniile intre ele 
     b) coloanele intre ele
+
+2. Sa se bordeze o matrice cu n liniii si m coloane.
