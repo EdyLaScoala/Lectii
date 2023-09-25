@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ifstream fin("./data.txt");
+ifstream fin("data.txt");
 
 int main()
 {
