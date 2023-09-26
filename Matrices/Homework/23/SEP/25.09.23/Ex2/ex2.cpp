@@ -7,22 +7,17 @@ ifstream fin("data.txt");
 
 int main()
 {
-    int m, n, x, maxim=0;
+    int m, n, x=0, maxAppearances = 0, numberWithMax = -1;
     fin >> m >> n; 
     int v[1000001] = {0};
     while(fin >> x)
     {
         v[x]++;
-        //cout << x << " " << v[x] << endl;
-    }
-
-    for(int i=0; i<m-1; i++)
-    {
-        if(v[i]>maxim)
+        if(v[x] > maxAppearances)
         {
-            maxim=v[i];
-            cout << i << " " << v[i] << maxim << endl;
+            maxAppearances = v[x];
+            numberWithMax = x;
         }
     }
-    cout << maxim;
+    cout << numberWithMax;
 }
