@@ -1,1 +1,0 @@
-1. Sa se creeze cod pentru citirea unei matrici cu m randuri si n coloane de la tastatura si afisarea ei
