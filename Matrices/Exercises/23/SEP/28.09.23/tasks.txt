@@ -1,0 +1,4 @@
+1. Se da o matrice cu m linii si n coloane. Sa se roteasca spre dreapta
+
+2. Se da o matrice cu m linii si n coloane. Sa se roteasca spre stanga
+
