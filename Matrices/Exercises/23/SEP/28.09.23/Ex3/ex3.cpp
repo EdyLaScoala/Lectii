@@ -26,9 +26,9 @@ int main()
     {
         cout << v[i][n-1] << " ";
     }
-    for(int i=m-1; i>0; i--)
+    for(int i=n-1; i>=0; i--)
     {
-        cout << v[n-1][i] << " ";
+        cout << v[m-1][i] << " ";
     }
     for(int i=n-1; i>=0; i--)
     {
