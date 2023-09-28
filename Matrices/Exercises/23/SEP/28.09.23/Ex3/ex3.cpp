@@ -9,7 +9,7 @@ int main()
 {
     int m, n;
     fin >> m >> n;
-    int v[m][n];
+    int v[100][100];
     for(int i=0; i<m; i++)
     {
         for(int j=0; j<n; j++)
@@ -20,12 +20,18 @@ int main()
 
     for(int i=0; i<m; i++)
     {        
-        for(int j=0; j<n; j++)
-        {
-            if ((i == 0 || i == m-1) || (j == 0 || j == m))
-            {
-                cout << v[i][j] << " ";
-            }
-        }
+        cout << v[0][i] << " ";
+    }
+    for(int i=0; i<n; i++)
+    {
+        cout << v[i][n-1] << " ";
+    }
+    for(int i=m-1; i>0; i--)
+    {
+        cout << v[n-1][i] << " ";
+    }
+    for(int i=n-1; i>=0; i--)
+    {
+        cout << v[i][0] << " ";
     }
 }
