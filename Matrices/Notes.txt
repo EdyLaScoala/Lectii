@@ -84,4 +84,4 @@ Rotating:
 -Show matrix A
 
 -Construct matrix B
--Show matrix B
+-Show matrix B 
