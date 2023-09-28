@@ -8,24 +8,24 @@ ifstream fin("data.txt");
 int main()
 {
     int m, n;
-    fin >> n >> m;
-    int v[100][100], x[100][100];
-    for(int i=0; i<n; i++)
+    fin >> m >> n;
+    int v[m][n];
+    for(int i=0; i<m; i++)
     {
-        for(int j=0; j<m; j++)
+        for(int j=0; j<n; j++)
         {
             fin >> v[i][j];
         }
     }
 
     for(int i=0; i<m; i++)
-    {
+    {        
         for(int j=0; j<n; j++)
         {
-            x[i][j] = v[j][m-i-1];
-            cout << x[i][j] << " ";
+            if ((i == 0 || i == m-1) || (j == 0 || j == m))
+            {
+                cout << v[i][j] << " ";
+            }
         }
-        cout << endl;
     }
-    return 0;
 }
