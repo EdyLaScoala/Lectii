@@ -1,0 +1,4 @@
+1.  Intr-un fisier matrice.in avem un numar n, reprezentand numarul de linii si de coloane, iar pe urmatoarele n linii ale matrcei elementele. 
+    Sa se afisexe cercurile concentrice reprezentate de linii si coloane.
+
+    
