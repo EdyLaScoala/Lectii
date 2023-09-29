@@ -1,4 +1,5 @@
 1.  Intr-un fisier matrice.in avem un numar n, reprezentand numarul de linii si de coloane, iar pe urmatoarele n linii ale matrcei elementele. 
     Sa se afisexe cercurile concentrice reprezentate de linii si coloane.
 
-    
+2.  Modificati programul anterior astfel incat sa afiseze toate submatricile matricei anterioare.
+    Prin submatrice se intelege matricea inclusa in cercurile concentrice
