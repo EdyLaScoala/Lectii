@@ -17,14 +17,13 @@ int main()
         }
     }
 
-    for(int k=0; k<=(n/2)+1; k++)
+    for(int k=0; k<=n/2; k++)
     {
-        //cout << k << " " << ((n/2)+1)-k << endl;
-        for(int i=((n/2))-k; i<=k; i++)
+        for(int i=k; i<n-k; i++)
         {
-            for(int j=((n/2))-k; j<=k; j++)
+            for(int j=k; j<n-k; j++)
             {
-                cout << v[i+1][j+1] << " ";
+                cout << v[i][j] << " ";
             }
             cout << endl;
         }
