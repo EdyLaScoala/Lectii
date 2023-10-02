@@ -6,34 +6,31 @@ using namespace std;
 int main()
 {
     ifstream fin("data.txt");
-    int n;
-    fin >> n;
-    int v[n][n];
-    for(int i=0; i<n; i++)
+    int m, n;
+    fin >> m >> n;
+    for(int i=1; i<=m; i++)
     {
-        for(int j=0; j<n; j++)
+        for(int j=1; j<=n; j++)
         {
-            fin >> v[i][j];
-        }
-    }
-
-    for(int k=0; k<n/2; k++)
-    {
-        for(int j=k; j<n-k-1; j++)
-        {
-            cout << v[k][j] << " ";
-        }
-        for(int i=k; i<n-k-1; i++)
-        {
-            cout << v[i][n-1-k] << " ";
-        }
-        for(int j=n-1-k; j>k-1; j--)
-        {
-            cout << v[n-1-k][j] << " ";
-        }   
-        for(int i=n-1-k; i>k-1; i--)
-        {
-            cout << v[i][k] << " ";
+            if(i == 1 || j == 1 || i == m || j == n)
+            {
+                cout << 1 << " ";
+            }
+            else
+            {
+                if(j>=i)
+                {
+                    cout << i << " ";
+                }
+                else if(m-i<n-j)
+                {
+                    cout << m-i << " ";
+                }
+                else
+                {
+                    cout << j << " ";
+                }
+            }
         }
         cout << endl;
     }
