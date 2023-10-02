@@ -1,0 +1,1 @@
+1.  Matrice cu carde concentrice. N este numarul de linii si de coloane
