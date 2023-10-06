@@ -67,18 +67,19 @@ void d()
 void e()
 {
     unsigned long long prod=1;
-    int x;
+    int x, mhm=0;
     for(int i=0; i<m; i++)
     {
         for(int j=0; j<n; j++)
         {
+            mhm=0;
             x = v[i][j];
-            while(x!=0)
+            while(x!=0 && mhm==0)
             {
                 if(x%10==1)
                 {
                     prod *= v[i][j];
-                    break;
+                    mhm=1;
                 }
                 x/=10;
             }
