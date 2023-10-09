@@ -7,23 +7,20 @@ ifstream fin("data.txt");
 
 int main()
 {
-    int n, aux;
-    fin >> n;
-    int v[n][n];
-    for(int i=0; i<n; i++)
+    int m, n, aux;
+    fin >> m >> n;
+    int v[m][n];
+    for(int i=0; i<m; i++)
     {
         for(int j=0; j<n; j++)
         {
-            if(i%2!=0)
-                v[i][j] = j+1;
-            else
-                v[i][j] = i+1;
+            fin >> v[i][j];
         }
     }
 
     
 
-    for(int i=0; i<n; i++)
+    for(int i=0; i<m; i++)
     {
         for(int j=0; j<n; j++)
         {
