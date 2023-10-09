@@ -86,29 +86,18 @@ void e()
 {
     for(int i=0; i<n; i++)
     {
-        for(int j=0; j<n0; j++)
+        for(int j=0; j<n; j++)
         {
             if(i%2==0)
-        {
-            for(int j=n*i; j<n*(i+1); j++)
             {
-                cout << j+1 << " ";
+                cout << n*i+j +1<< " ";
             }
-            cout << endl;
-                
-        }
-        else
-        {
-            for(int j=(n*(i+2)); j>=n*(i+1)+1; j--)
+            else
             {
-                cout << j << " ";
+                cout << n*(i+1)-j << " ";
             }
-            cout << endl;
-        }
         }
         cout << endl;
-             
-        
     }
     cout << endl;
 }
