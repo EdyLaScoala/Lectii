@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+ifstream fin("data.txt");
+
+int main()
+{
+    int m, n, k=1;
+    fin >> m >> n;
+    int v[m][n];
+    for(int i=0; i<m; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            v[i][j] = k*k;
+            k+=2;
+        }
+    }
+
+    
+
+    for(int i=0; i<m; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
