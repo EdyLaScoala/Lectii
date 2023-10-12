@@ -1,3 +1,6 @@
 1.  Modificati exercitiul de la clasa pentru a insera elemente pe coloana
 
 2.  Modificati problema de la scoala astfel incat sa se stearga o linie k data
+
+3.  Se da o matrice nu n linii si n coloane, cu numere intregi de maxim 4 cifre.
+    Sa se determine numarul de aparitii al fiecareia dintre valorile cu 2 cifre din interiorul matricii
