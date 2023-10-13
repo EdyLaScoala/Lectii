@@ -12,6 +12,8 @@ EX_SCRIPT := GenerateExercise.sh
 
 HW_SCRIPT := GenerateHomework.sh
 
+TEST_SCRIPT := GenerateTest.sh
+
 date_script: $(GENERATOR_DIR)/$(SCRIPT)
 	chmod +x $(GENERATOR_DIR)/$(SCRIPT)
 	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
@@ -24,3 +26,7 @@ ex:
 hw:
 	@read -p "Enter the exercise number: " EXERCISE_NUMBER; \
 	$(GENERATOR_DIR)/$(HW_SCRIPT) "$$EXERCISE_NUMBER"
+
+test:
+	@read -p "Enter the test number: " EXERCISE_NUMBER; \
+	$(GENERATOR_DIR)/$(TEST_SCRIPT) "$$EXERCISE_NUMBER"
