@@ -10,7 +10,7 @@ fi
 exercise_number="$1"
 
 # Set the parent folder for tests (one level above your project directory)
-parent_folder="Tests"
+parent_folder="./Tests"
 
 # Get the current year
 current_year=$(date +"%y")
@@ -22,7 +22,7 @@ current_month=$(date +"%b" | tr '[:lower:]' '[:upper:]')
 current_date=$(date +"%d.%m.%y")
 
 # Define the directory name based on the year, month, and date
-year_month_date_directory="/workspaces/Lectii/Tests/$current_year/$current_month/$current_date"
+year_month_date_directory="./Tests/$current_year/$current_month/$current_date"
 
 # Check if the directory exists, create it if needed
 if [ ! -d "$year_month_date_directory" ]; then
