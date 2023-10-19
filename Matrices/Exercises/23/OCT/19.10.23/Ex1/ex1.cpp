@@ -7,42 +7,35 @@ ifstream fin("matrice.in");
 
 int main()
 {
-    int n;
+    int n, min, prod=1;
     fin >> n;
-    short v[n][n], a[30]={0};
+    short v[n][n];
     for(int i=0; i<n; i++)
     {
-        a[i] = 99;
         for(int j=0; j<n; j++)
         {
             fin >> v[i][j];
-            if(v[i][j] <= v[i][a[i]])
+        }
+    }
+
+    for(int j=0; j<n; j++)
+    {
+        min = 99;
+        for(int i=0; i<n; i++)
+        {
+            if(v[i][j] < min)
             {
-                a[i] = j;
-                cout << a[i] << " " << i << endl;
+                min = v[i][j];
             }
         }
-    }
-
-    cout << endl;
-
-    for(int i=0; i<n; i++)
-    {
-        for(int j=0; j<n; j++)
+        if(min = v[j][n-j-1] && )
         {
-            cout << v[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    for(int i=0; i<n; i++)
-    {
-        if(v[i][n-i-1] = v[i][a[i]])
-        {
-            cout << v[i][a[i]] << endl;
+            cout << min << endl;
+            prod*=min;
         }
     }
+    cout << endl;
+
+    cout << prod;
     return 0;
 }
