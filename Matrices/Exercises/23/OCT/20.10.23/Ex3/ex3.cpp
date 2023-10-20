@@ -20,7 +20,7 @@ int main()
 
     int i=0, j=0, sum=0;
 
-    while(i<=n && j<=n)
+    while(i<m && j<n)
     {
         if(v[i+1][j] > v[i+1][j+1])
         {
