@@ -22,7 +22,7 @@ current_month=$(date +"%b" | tr '[:lower:]' '[:upper:]')
 current_date=$(date +"%d.%m.%y")
 
 # Define the directory name based on the year, month, and date
-year_month_date_directory="Matrices/Homework/$current_year/$current_month/$current_date"
+year_month_date_directory="Classwork/Homework/$current_year/$current_month/$current_date"
 
 # Check if the directory exists, create it if needed
 if [ ! -d "$year_month_date_directory" ]; then
@@ -40,7 +40,7 @@ if [ ! -d "$exercise_directory" ]; then
 fi
 
 # Define the path to the local template.cpp file
-template_path="./Matrices/template.cpp"
+template_path="./Classwork/template.cpp"
 
 # Copy the local template.cpp file to the exercise directory
 cp "$template_path" "$exercise_directory/ex${exercise_number}.cpp"
