@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    char s[] = {"am 12 cai, 35,244gaini si 3,4 gaini"};
+    char s[] = {"am 12 cai si 3,4 gaini"};
     int done=0, j=0;
     int k=2;
     for(int i=0; i<strlen(s); i++)
