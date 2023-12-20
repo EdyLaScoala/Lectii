@@ -3,13 +3,10 @@
 
 char s[2048];
 char key[64];
-
-char encryptText(char s[], char key[] = "")
+char encryptText(char s[], char key[])
 {
     int arg = 0;
-    if(key != "") for(int i=0; i<strlen(key); i++) arg += key[i];
-    for(int i=0; i<strlen(s); i++) s[i] += arg+1;
-    cout << s;
+    for(int i=0; i<strlen(key); i++) arg += key[i];
     return *s;
 }
 
@@ -23,21 +20,15 @@ int main()
     cin.getline(s, 2048);
     while(true)
     {
-        cout << "Commands:\nEncryption     1\nDecryption     2\nExit        0\n";
+        cout << "Commands:\nEncryption     1\nDecryption     2\nExit        0";
         cin >> commandNum;
-        switch(commandNum)
+        if(commandNum == 1)
         {
-            case 1:
-                encryptText(s);
-
-            case 2:
-                switch(encryptionKeyState)
-                {
-                    case 0:
-                        cout << "Please enter an encryption key: ";
-                        cin.getline(key, 64);
-
-                }
+            encryptText(s, )
+            //switch(encryptionKeyState)
+            //{
+                
+            //}
         }
     }
     cout << endl << "Enter key: ";
