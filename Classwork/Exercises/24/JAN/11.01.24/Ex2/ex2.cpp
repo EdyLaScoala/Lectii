@@ -1,20 +1,20 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
-ifstream fin("data.txt");
-
 int main()
 {
-    int n;
-    fin >> n;
-    char s[n];
-    cin.getline(s, n);
-    for(int i=0; i<n; i++)
+    char s[] = {"Am  ingrasat porcul   in  ajun"}, *p;
+    p = strtok(s, " ");
+    cout << p << endl;
+    short words = 0;
+    while (p!=0)
     {
-        cout << s[i];
+        words++;
+        cout << p << " - " << &p << endl;
+        p = strtok(NULL, " ");
     }
+    cout << words;
     return 0;
 }
