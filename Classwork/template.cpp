@@ -1,20 +1,14 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
-ifstream fin("data.txt");
-
 int main()
 {
-    int n;
-    fin >> n;
-    char s[n];
-    cin.getline(s, n);
-    for(int i=0; i<n; i++)
+    char s[] = {" "};
+    for(int i=0; i<strlen(s); i++)
     {
-        cout << s[i];
+        
     }
     return 0;
 }
