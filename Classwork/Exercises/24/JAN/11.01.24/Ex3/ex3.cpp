@@ -1,20 +1,21 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
-ifstream fin("data.txt");
-
 int main()
 {
-    int n;
-    fin >> n;
-    char s[n];
-    cin.getline(s, n);
-    for(int i=0; i<n; i++)
+    char s[] = {"Daca incep cu litera i, sa se scrie pe ecran iterat cuvantul succes."}, *p, str[255] = {" "};
+    p = strtok(s, " ");
+    while(p!=0)
     {
-        cout << s[i];
+        p = strtok(NULL, " .,:;!?");
+        strcpy(str, p);
+        if(p[0]=='i'){
+            strcpy(str, " succes ");
+        }
     }
+    cout << str;
     return 0;
 }
+//255 char + cuvant c, print(cuvinte.sufix(c));
