@@ -38,7 +38,11 @@ void b()
 void c()
 {
     ifstream fin("data.txt");
-    
+    char s[255];
+    while(fin >> s)
+    {
+        //fo
+    }
 }
 
 //{",.;:!?"}
