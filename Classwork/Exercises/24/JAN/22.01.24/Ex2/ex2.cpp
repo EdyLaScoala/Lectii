@@ -34,3 +34,7 @@ int main()
 }
 
 //      pictura prin aceea arata o pace profunda
+
+// max 30 caractere
+
+// sa se ordoneze lexicografic cuvintele si sa se inlocuiasca cu stea toate vocalele din cel mai lung cuvant palindrom sau mesajul nu exista daca niciun cuvant nu e palindrom
