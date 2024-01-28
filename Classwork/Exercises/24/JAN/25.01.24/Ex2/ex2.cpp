@@ -10,7 +10,7 @@ void show(char* n)
     strcat(v, "*");
     strcat(v, n);
 
-    for(int i=1; i<=strlen(n); i++)
+    for(int i=1; i<=strlen(n)+1; i++)
     {
         for(int j=strlen(n)+1-i; j<strlen(n)+i; j++)
         {
