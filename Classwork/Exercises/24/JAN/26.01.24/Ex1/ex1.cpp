@@ -44,9 +44,14 @@ int main()
 
     cout << m << " " << n << endl;
 
-    for(int i=0; i<n; i++)
+    for(int i=0; i<m+2; i++)
     {
-        
+        for(int j=0; j<n+2; j++)
+        {
+            if(show[i][j]==true) 
+                cout << v[i][j] << " ";
+        }
+        cout << endl;
     }
 
 }
