@@ -42,16 +42,41 @@ int main()
     m-=2;
     n-=2;
 
-    cout << m << " " << n << endl;
+    ofstream fout("tmp.txt");
+
+    fout << m << " " << n << endl;
 
     for(int i=0; i<m+2; i++)
     {
         for(int j=0; j<n+2; j++)
         {
             if(show[i][j]==true) 
-                cout << v[i][j] << " ";
+                fout << v[i][j] << " ";
+        }
+        if(show[i][0]==true)
+        fout << endl;
+    }
+
+    ifstream file("tmp.txt");
+    file >> m;
+    cout << m << " ";
+    file >> n;
+    cout << n << endl;
+
+    int vector[m][n] = {0};
+    for(int i=0; i<m; i++) 
+    {
+        for(int j=0; j<n; j++) 
+        {
+            file >> vector[i][j];
+        }
+    }
+    for(int i=0; i<m; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cout << vector[i][j] << " ";
         }
         cout << endl;
     }
-
 }
