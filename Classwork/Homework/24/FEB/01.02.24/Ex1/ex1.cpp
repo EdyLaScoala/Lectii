@@ -154,7 +154,6 @@ void fromBaseXToBase10()
     cout << "Introduceti baza numarului: ";
     cin >> baza;
 
-
     int n2 = 0, i = 0;
 
     while (n != 0) {
