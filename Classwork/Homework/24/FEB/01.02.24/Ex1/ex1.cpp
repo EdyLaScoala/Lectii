@@ -147,26 +147,22 @@ void cmmmc()
 
 void fromBaseXToBase10()
 {
-    int base, n, n2, nr;
-    cout << "Va rugam sa introduceti baza initiala: ";
-    cin >> base;
-    cout << "Va rugam introduceti numarul de convertit in baza 10: ";
+   int baza, n;
+    cout << "Introduceti un numar: ";
     cin >> n;
-    while(n!=0)
-    {
-        n2*=10;
-        n2+=n%10;
-        n/=10;
-        nr++;
+
+    cout << "Introduceti baza numarului: ";
+    cin >> baza;
+
+
+    int n2 = 0, i = 0;
+
+    while (n != 0) {
+        n2 += (n % 10) * pow(baza, i);
+        n /= 10;
+        i++;
     }
-    n=0;
-    int i=0;
-    while(n2!=0)
-    {
-        n += (n2 % 10)^i;
-        n2/=10;
-    }
-    cout << n;
+    cout << n2;
     space();
 }
 
@@ -226,5 +222,4 @@ int main(){
             cout << "Unknown commmand ID. Please try again.\n";
         }
     }
-    
 }
