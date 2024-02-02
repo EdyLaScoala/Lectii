@@ -30,3 +30,5 @@ int main()
         cout << "Numarul nu este palindrom.";
     }
 }
+
+//n valori intregi, max. 9 cifre. sa se afiseze doar numerele prime
