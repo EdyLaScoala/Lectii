@@ -17,8 +17,6 @@ int suma(int& n, int& a)
     return s;
 }
 
-
-
 int main()
 {
     int n=0, a=0, k=0;
