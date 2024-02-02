@@ -30,5 +30,3 @@ int main()
         cout << "Numarul nu este palindrom.";
     }
 }
-
-// se afiseaza n daca e palindrom si n daca nu
