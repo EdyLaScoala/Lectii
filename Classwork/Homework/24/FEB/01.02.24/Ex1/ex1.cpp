@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 #include <math.h>
-#include <stdlib.h>
 
 using namespace std;
 
