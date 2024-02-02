@@ -1,5 +1,3 @@
-//algoritm pentru trecerea unei valori din orice baza in baza 10, trecerea din orice abza in baza 2, compunerea unei valori dintr-o sucesiune de max. 9 cifre date - valoarea incepe cu cifra unitatilor, 
-
 #include <iostream>
 #include <cstring>
 #include <math.h>
@@ -161,7 +159,44 @@ void fromBaseXToBase10()
         n /= 10;
         i++;
     }
-    cout << n2;
+    cout << "Numarul in baza 10: " << n2;
+    space();
+}
+
+void fromBase10ToBaseX()
+{
+    int baza, n;
+    cout << "Introduceti un numar: ";
+    cin >> n;
+    cout << "Introduceti baza numarului: ";
+    cin >> baza;
+    int n2 = 0, i = 0;
+    while (n != 0) {
+        n2 += (n % baza) * pow(baza, i);
+        n /= baza;
+        i++;
+    }
+    cout << "Numarul in baza " << baza << ": " << n2 << endl;
+    space();
+}
+
+void compunere()
+{
+    int v[9], n=0, i=0;
+    cout << "Va rugam introduceti un numar de cifre: ";
+    cin >> i;
+    cout << "Va rugam sa introduceti cifrele numarului, incepand de la cifra unitatilor, cu un spatiu intre ele: ";
+    for(int j=0; j<i; j++)
+    {
+        cin >> v[i];
+    }
+    while(i>0)
+    {
+        n*=10;
+        n+=v[i-1];
+        i--;
+    }
+    cout << "Numarul compus: " << n << ".";
     space();
 }
 
@@ -215,7 +250,13 @@ int main(){
             fromBaseXToBase10();
             break;
 
-        
+        case 10:
+            fromBase10ToBaseX();
+            break;
+
+        case 11:
+            compunere();
+            break;
 
         default:
             cout << "Unknown commmand ID. Please try again.\n";
