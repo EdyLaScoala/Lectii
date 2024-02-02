@@ -5,10 +5,11 @@ using namespace std;
 
 int main()
 {
-    char s[] = {" "};
-    for(int i=0; i<strlen(s); i++)
-    {
-        
-    }
+    char s[255] = {" "};
+    cin.getline(s, 255);
+
+    int n=0;
+    cin >> n;
+    
     return 0;
 }
