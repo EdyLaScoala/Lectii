@@ -55,8 +55,8 @@ bool palindrom()
     {
         if(s[i] != s[strlen(s)-i-1])
         {
-            space();
             cout << "Numarul nu este palindrom.";
+            space();
             return false;
         }
     }
@@ -113,11 +113,12 @@ void factoriPrimi()
 
 void cmmdc()
 {
-    int a, b, r, cmmmc, cmmdc;
+    int a, b, r, cmmdc;
     cout << "Introduceti doua numere, a si b: ";
     cin >> a >> b;
     cout << endl;
-    while(b!=0 && a%b!=0){
+    while(a%b!=0)
+    {
         r=a%b;
         a=b;
         b=r;
@@ -129,22 +130,24 @@ void cmmdc()
 
 void cmmmc()
 {
-    int a, b, r, cmmmc;
+    int a, b, a2, b2, r;
     cout << "Introduceti doua numere, a si b: ";
     cin >> a >> b;
+    a2=a, b2=b;
     cout << endl;
-    while(b!=0 && a%b!=0){
+    while(a%b!=0)
+    {
         r=a%b;
         a=b;
         b=r;
     }
-    cout << cmmmc;
+    cout << (a2*b2)/r;
     space();
 }
 
 void fromBaseXToBase10()
 {
-   int baza, n;
+    int baza, n;
     cout << "Introduceti un numar: ";
     cin >> n;
 
@@ -187,13 +190,9 @@ void compunere()
     cout << "Va rugam sa introduceti cifrele numarului, incepand de la cifra unitatilor, cu un spatiu intre ele: ";
     for(int j=0; j<i; j++)
     {
-        cin >> v[i];
-    }
-    while(i>0)
-    {
+        cin >> v[j];
         n*=10;
-        n+=v[i-1];
-        i--;
+        n+=v[j];
     }
     cout << "Numarul compus: " << n << ".";
     space();
