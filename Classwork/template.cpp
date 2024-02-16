@@ -18,7 +18,5 @@ int main()
     int v[n];
     read(v, n);
 
-    
-
     return 0;
 }
