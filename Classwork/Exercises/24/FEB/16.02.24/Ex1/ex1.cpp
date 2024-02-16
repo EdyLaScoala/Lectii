@@ -3,10 +3,10 @@
 
 using namespace std;
 
+
+
 int main()
 {
-    char s[255] = {" "};
-    cin.getline(s, 255);
-    
-    return 0;
+    int n=0;
+    cin >> n;
 }
