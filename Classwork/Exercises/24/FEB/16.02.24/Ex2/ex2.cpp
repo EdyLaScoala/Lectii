@@ -3,20 +3,49 @@
 
 using namespace std;
 
-int read(int v[], int n)
+void upsort(int v[], int n)
 {
     for(int i=0; i<n; i++)
-        cin >> v[i];
-    return *v;
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if(v[i]>v[j])
+            {
+                swap(v[i], v[j]);
+            }
+        }
+        cout << v[i] << " ";
+    }
+}
+
+void downsort(int v[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if(v[i]<v[j])
+            {
+                swap(v[i], v[j]);
+            }
+        }
+        cout << v[i] << " ";
+    }
 }
 
 int main()
 {
-    int n=0;
-    cin >> n;
-
+    char s[255];
+    cin.getline(s, 255);
+    int n=strlen(s);
     int v[n];
-    read(v, n);
+    for(int i=0; i<n; i++)
+    {
+        v[i] = s[i];
+    }
+    
+    upsort(v, n);
 
-    return 0;
+    downsort(v, n);
+
 }
