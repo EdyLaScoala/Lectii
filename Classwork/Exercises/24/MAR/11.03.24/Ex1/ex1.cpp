@@ -3,19 +3,16 @@
 
 using namespace std;
 
-bool prim(int& n)
+void sub(int n, int &a, int &b)
 {
-    for(int i=2; i<=sqrt(n); i++) if(n%i==0) return false;
-    return true;
-}
-
-void sub(int n)
-{
+    bool prim=true;
     for(int i=0; i<2; n--)
     {
-        if(prim(n))
+        prim=true;
+        for(int j=2; j<=sqrt(n); j++) if(n%j==0) prim=false;
+        if(prim)
         {
-            cout << n << endl;
+            if(i==0) a=n; else b=n;
             i++;
         }
     }
@@ -23,7 +20,8 @@ void sub(int n)
 
 int main()
 {
-    int n;
+    int n, a, b;
     cin >> n;
-    sub(n);
+    sub(n, a, b);
+    cout << a  << " " << b;
 }
