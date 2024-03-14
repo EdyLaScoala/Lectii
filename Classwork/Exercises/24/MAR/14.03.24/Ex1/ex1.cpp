@@ -4,6 +4,7 @@
 using namespace std;
 
 ifstream fin("bac.in");
+ofstream fout("bac.out");
 
 void p(int &n)
 {
@@ -33,6 +34,6 @@ int main()
     {
         p(n);
         if(n!=0)
-            cout << n << endl;
+            fout << n << endl;
     }
 }
