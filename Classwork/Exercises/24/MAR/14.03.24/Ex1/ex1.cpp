@@ -8,23 +8,17 @@ ofstream fout("bac.out");
 
 void p(int &n)
 {
-    int a=0;
+    int a=0, i=1;
     while(n!=0)
     {
         if(n%2==0)
         {
-            a*=10;
-            a+=n%10;
+            a=a+i*(n%10);
+            i*=10;
         }
         n/=10;
     }
-    n=0;
-    while(a!=0)
-    {
-        n*=10;
-        n+=a%10;
-        a/=10;
-    }
+    n=a;
 }
 
 int main()
