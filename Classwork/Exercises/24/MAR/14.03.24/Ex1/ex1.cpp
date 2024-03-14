@@ -1,22 +1,38 @@
 #include <iostream>
-#include <cstring>
+#include <fstream>
 
 using namespace std;
 
-int read(int v[], int n)
+ifstream fin("bac.in");
+
+void p(int &n)
 {
-    for(int i=0; i<n; i++)
-        cin >> v[i];
-    return *v;
+    int a=0;
+    while(n!=0)
+    {
+        if(n%2==0)
+        {
+            a*=10;
+            a+=n%10;
+        }
+        n/=10;
+    }
+    n=0;
+    while(a!=0)
+    {
+        n*=10;
+        n+=a%10;
+        a/=10;
+    }
 }
 
 int main()
 {
-    int n=0;
-    cin >> n;
-
-    int v[n];
-    read(v, n);
-
-    return 0;
+    int n;
+    while(fin >> n)
+    {
+        p(n);
+        if(n!=0)
+            cout << n << endl;
+    }
 }
