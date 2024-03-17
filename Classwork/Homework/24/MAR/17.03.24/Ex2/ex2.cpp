@@ -24,3 +24,14 @@ int main()
     cout << "treungheulara";
     return 1;
 }
+
+/*
+input:
+5
+1 0 0 0 0
+1 4 0 0 0
+5 2 3 0 0
+1 5 2 3 0
+1 4 8 2 3
+
+*/

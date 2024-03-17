@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 
@@ -25,3 +24,14 @@ int main()
     cout << "treungheulara";
     return 1;
 }
+
+/*
+input: 
+
+5
+1 4 3 7 9
+0 4 2 5 3
+0 0 1 4 2
+0 0 0 1 3
+0 0 0 0 1
+*/
