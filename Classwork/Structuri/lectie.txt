@@ -1,0 +1,41 @@
+Structura:
+
+struct nume_structura
+{
+    tip_date nume_variabila;
+    tip_date nume_variabila_2;
+    tip_date nume_variabila_3;
+}
+
+===== SAU =====
+
+struct
+{
+    tip_date nume_variabila;
+    tip_date nume_variabila_2;
+    tip_date nume_variabila_3;
+} nume_structura
+
+
+
+Exemplu:
+
+struct elev
+{
+    int cod;
+    char nume[26];
+    char prenume[26];
+    float medie;
+}
+
+elev x, clasa[30];
+
+===== SAU =====
+
+struct
+{
+    int cod;
+    char nume[26];
+    char prenume[26];
+    float medie;
+} x, clasa[30];
