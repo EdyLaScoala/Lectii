@@ -44,6 +44,7 @@ int main()
         cout << elevi[i].localitate << " ";
         cout << elevi[i].media << endl;
 
+
         i++;
     }
 
