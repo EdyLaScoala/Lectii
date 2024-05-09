@@ -38,7 +38,6 @@ int main()
         {
             b.x/=cmmdc(b.x, b.y);
             b.y/=cmmdc(b.x, b.y);
-            cout << b.x << " " << b.y << endl;
         }
     }
 
