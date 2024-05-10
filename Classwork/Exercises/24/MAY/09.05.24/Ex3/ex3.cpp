@@ -17,5 +17,7 @@ int main()
     int n=0;
     cin >> n;
 
+    cout << SumProdRec(n);
+
     return 0;
 }
