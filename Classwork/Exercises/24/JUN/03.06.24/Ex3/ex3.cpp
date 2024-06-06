@@ -1,0 +1,129 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int v[n][n];
+    cout << v;
+}
