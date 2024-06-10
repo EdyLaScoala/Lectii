@@ -4,14 +4,12 @@ using namespace std;
 
 int main()
 {
-    struct
+    struct procesor
     {
         char producator;
-        int frecventa, pret;
-    } procesor[20];
-
-    int n=0;
-    cin >> n;
-
+        int frecventa;
+        float pret;
+    } p[20];
+    
     return 0;
 }
