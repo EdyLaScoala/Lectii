@@ -15,9 +15,15 @@ int f(int a, int b)
 
 int main()
 {
-    int a=12558842;
+    int a=12558812;
     int v[10]={0};
-    for(int i=0; i<10; i++) if(f(a, i) % 2 == 0) v[i] = f(a, i);
+    for(int i=0; i<10; i++) 
+        if(f(a, i) % 2 != 0) 
+        {
+            cout << "nu exista";
+            return 0;
+        }
+        else v[i] = f(a, i);
     for(int i=9; i>=0; i--) while(v[i]/2!=0) cout << i, v[i]--; 
     for(int i=0; i<=9; i++) while(v[i]!=0) cout << i, v[i]--;
     return 0;
