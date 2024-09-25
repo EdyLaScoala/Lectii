@@ -20,3 +20,22 @@ int main()
     cout << f(n);
     return 0;
 }
+
+/*
+
+1 2 3
+2 1 3
+2 3 1
+1 3 2
+3 1 2
+3 2 1
+
+
+abc  =>
+axb
+bxc
+axc
+axb
+bxc
+
+*/
