@@ -2,23 +2,30 @@
 
 using namespace std;
 
-typedef int stack[100];
-int n, k, ev, as;
+typedef char stack[100];
+int k, ev, as;
+int index = 0;
+
+char chars[] = {'a', 'b', 'c', 'd', 'e'};
 stack st;
 
 void init()
 {
-    st[k] = 0;
+    st[k] = '0';
 }
 
 int succesor()
 {
-    if(st[k] < n) 
+    if(st[k] < chars[4]) 
     {
-        st[k]++;
+        st[k] = chars[index++];
         return 1;
     }
-    else return 0;
+    else
+    {
+        k--;
+        return 0;
+    }
 }
 
 int valid()
@@ -26,20 +33,21 @@ int valid()
     for(int i=0; i<k; i++)
     {
         if(st[k] == st[i] ) return 0;
+        if(st[k] == 'a' && st[k-1]=='e' || st[k] == 'a' && st[k+1] == 'e') return 0;
     }
     return 1;
 }
 
 int solutie()
 {
-    return k==n;
+    return k==5;
 }
 
 void tipar()
 {
-    for(int i=1; i<=n; i++)
+    for(int i=1; i<=5; i++)
     {
-        cout << st[i] << " ";
+        cout << st[i];
     }
     cout << endl;
 }
@@ -70,6 +78,5 @@ void bt()
 
 int main()
 {
-    cout << "n = "; cin >> n;
     bt();
 }
