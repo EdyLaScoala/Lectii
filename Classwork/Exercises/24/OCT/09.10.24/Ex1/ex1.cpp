@@ -6,14 +6,15 @@ using namespace std;
 int m, n, v[100];
 string colors[100];
 
-ifstream fin("data.in");
+ifstream fin("date.in");
 
-// alb, galben, verde, rosu, albastru, negru
+// se pot adauga infinite culori
 
-void load_colors()
+int load_colors()
 {
-    int i=0;
+    int i=1;
     while(fin >> colors[i]) i++;
+    return i-1;
 }
 
 void init(int k)
@@ -25,7 +26,7 @@ void print()
 {
     for(int i=1; i<=m; i++)
     {
-        cout << colors[i] << " ";
+        cout << colors[v[i]] << " ";
     }
     cout << endl;
 }
@@ -49,7 +50,9 @@ bool hasSuccesor(int k)
 
 bool isSolution(int k)
 {
-    if(v[m/2] == 1 ||  v[m/2] == 3 || v[m/2] == 4) return k==m;
+    if(m%2==0) if(v[m/2] == 1 ||  v[m/2] == 3 || v[m/2] == 4) return k==m;
+    else return false;
+    else if(v[m/2+1] == 1 ||  v[m/2+1] == 3 || v[m/2+1] == 4) return k==m;
     else return false;
 }
 
@@ -64,9 +67,9 @@ void backtrack(int k)
 
 int main()
 {
-    load_colors();
+    int available = load_colors();
     cout << "Introduceti numarul de culori de pe steag: "; cin >> m;
-    cout << "Introduceti numarul de culori valabile: "; cin >> n;
+    cout << "Aveti " << available <<" culori la dispozitie. Introduceti numarul de culori valabile: "; cin >> n;
     backtrack(1);
     return 0;
-} 
+}
