@@ -1,24 +1,43 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 int m, n, v[100];
+string colors[100];
 
-void init(int i)
+ifstream fin("data.in");
+
+// alb, galben, verde, rosu, albastru, negru
+
+void load_colors()
 {
-    v[i]=0;
+    int i=0;
+    while(fin >> colors[i]) i++;
+}
+
+void init(int k)
+{
+    v[k] = 0;
 }
 
 void print()
 {
     for(int i=1; i<=m; i++)
     {
-        cout << v[i];
+        cout << colors[i] << " ";
     }
     cout << endl;
 }
 
-bool isSuccessor(int k)
+bool isValid(int k)
+{
+    for(int i=0; i<k; i++)
+        if(v[i] == v[k]) return false;
+    return true;
+}
+
+bool hasSuccesor(int k)
 {
     if(v[k]<n)
     {
@@ -28,35 +47,26 @@ bool isSuccessor(int k)
     return false;
 }
 
-bool isValid(int k)
-{
-    for(int i=0; i<k; i++)
-    {
-        if(v[k] == v[i] ) return 0;
-    }
-    return 1;
-}
-
 bool isSolution(int k)
 {
-    return k == m;
+    if(v[m/2] == 1 ||  v[m/2] == 3 || v[m/2] == 4) return k==m;
+    else return false;
 }
 
 void backtrack(int k)
 {
     init(k);
-    while(isSuccessor(k))
+    while(hasSuccesor(k))
         if(isValid(k))
             if(isSolution(k)) print();
             else backtrack(k+1);
-
 }
 
 int main()
 {
-    cout << "m = "; cin >> m;
-    cout << endl << "n = "; cin >> n;
-
+    load_colors();
+    cout << "Introduceti numarul de culori de pe steag: "; cin >> m;
+    cout << "Introduceti numarul de culori valabile: "; cin >> n;
     backtrack(1);
     return 0;
-}
+} 

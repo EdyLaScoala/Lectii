@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int m, n, v[100];
+int m, n, v[100], s;
 
 void init(int k)
 {
@@ -37,7 +37,10 @@ bool hasSuccesor(int k)
 
 bool isSolution(int k)
 {
-    return k==m;
+    int sum;
+    for(int i=1; i<=n; i++) sum += v[i];
+    
+    return (k==m && sum==s);
 }
 
 int backtrack(int k)
@@ -51,7 +54,7 @@ int backtrack(int k)
 
 int main()
 {
-    cin >> m >> n;
+    cin >> m >> n >> s;
     backtrack(1);
     return 0;
 } 
