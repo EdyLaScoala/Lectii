@@ -2,7 +2,7 @@
 
 # Check if the test number argument is provided
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 <exercise_number>"
+    echo "Usage: $0 <test_number>"
     exit 1
 fi
 
@@ -10,7 +10,7 @@ fi
 exercise_number="$1"
 
 # Set the parent folder for tests (one level above your project directory)
-parent_folder="./Tests"
+parent_folder="Classwork/Tests"
 
 # Get the current year
 current_year=$(date +"%y")
@@ -22,7 +22,7 @@ current_month=$(date +"%b" | tr '[:lower:]' '[:upper:]')
 current_date=$(date +"%d.%m.%y")
 
 # Define the directory name based on the year, month, and date
-year_month_date_directory="./Tests/$current_year/$current_month/$current_date"
+year_month_date_directory="Classwork/Tests/$current_year/$current_month/$current_date"
 
 # Check if the directory exists, create it if needed
 if [ ! -d "$year_month_date_directory" ]; then
@@ -40,7 +40,7 @@ if [ ! -d "$exercise_directory" ]; then
 fi
 
 # Define the path to the local template.cpp file
-template_path="./Matrices/template.cpp"
+template_path="./Classwork/template.cpp"
 
 # Copy the local template.cpp file to the exercise directory
 cp "$template_path" "$exercise_directory/ex${exercise_number}.cpp"
