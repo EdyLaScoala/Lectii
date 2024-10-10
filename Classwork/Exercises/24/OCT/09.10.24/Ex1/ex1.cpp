@@ -6,7 +6,7 @@ using namespace std;
 int m, n, v[100];
 string colors[100];
 
-ifstream fin("date.in");
+ifstream fin("data.in");
 
 // se pot adauga infinite culori
 
