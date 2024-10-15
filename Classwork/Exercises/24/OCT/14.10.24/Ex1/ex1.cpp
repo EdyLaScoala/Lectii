@@ -20,8 +20,6 @@ void print()
 
 bool isValid(int k)
 {
-    for(int i=0; i<k; i++)
-        if(v[i] == v[k]) return false;
     return true;
 }
 
@@ -37,10 +35,19 @@ bool hasSuccesor(int k)
 
 bool isSolution(int k)
 {
-    return k==m;
+    for(int i=1; i<=5; i++)
+    {
+        cout << v[i] << " ";
+        if(v[i]%2!=0 && v[i+1]%2!=0)
+        {
+            return true;
+        }
+        cout << endl;
+    }
+    return false;
 }
 
-void backtrack(int k)
+int backtrack(int k)
 {
     init(k);
     while(hasSuccesor(k))
