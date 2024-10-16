@@ -37,14 +37,12 @@ bool isSolution(int k)
 {
     for(int i=1; i<=5; i++)
     {
-        cout << v[i] << " ";
         if(v[i]%2!=0 && v[i+1]%2!=0)
         {
-            return true;
+            return false;
         }
-        cout << endl;
     }
-    return false;
+    return true;
 }
 
 int backtrack(int k)
