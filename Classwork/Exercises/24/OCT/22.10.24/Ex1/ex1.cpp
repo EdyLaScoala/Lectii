@@ -1,55 +1,18 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
-int m, n, v[100];
+int v[10][10];
 
-void init(int k)
+void read()
 {
-    v[k] = k==1 ? 0 : v[k-1];
-}
-
-void print()
-{
-    for(int i=1; i<=m; i++)
-    {
-        cout << v[i] << " ";
-    }
-    cout << endl;
-}
-
-bool isValid(int k)
-{
-    return true;
-}
-
-bool hasSuccesor(int k)
-{
-    if(v[k]<n-m+k)
-    {
-        v[k]++;
-        return true;
-    }
-    return false;
-}
-
-bool isSolution(int k)
-{
-    return k==m;
-}
-
-void backtrack(int k)
-{
-    init(k);
-    while(hasSuccesor(k))
-        if(isValid(k))
-            if(isSolution(k)) print();
-            else backtrack(k+1);
+    ifstream fin("date.in");
+    for(int i=0; i<10; i++) for (int j = 0; j < 10; j++) fin >> v[i][j];
 }
 
 int main()
 {
-    cin >> m >> n;
-    backtrack(1);
+    
     return 0;
 }
