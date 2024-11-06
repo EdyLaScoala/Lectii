@@ -8,8 +8,8 @@ int binsrc(int v[], int s, int f, int nr)
     int mid = (s+f)/2;
     if(f-s<2) return -1;
     if(v[mid]==nr) return mid;
-    else if(v[mid]>nr) return binsrc(v, s, (s+f)/2, nr);
-    else return binsrc(v, (s+f)/2, f, nr);
+    else if(v[mid]>nr) return binsrc(v, s, mid-1, nr);
+    else return binsrc(v, mid+1, f, nr);
 }
 
 int main()
