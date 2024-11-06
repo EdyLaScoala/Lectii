@@ -1,11 +1,13 @@
-#include <iostream>
-#include <cstring>
+#include <fstream>
 
 using namespace std;
 
+ofstream fout("data.out");
+
 int main()
 {
-    char s[] = {"Salut copile."};
-    strcpy(s+2, s+4);
-    cout << s;
+    for(int i = 1; i<1001; i++)
+    {
+        fout << i << " ";
+    }
 }
