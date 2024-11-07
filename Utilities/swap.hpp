@@ -1,9 +1,6 @@
-void swap(bool cond, int &a, int &b)
+void swap(auto &a, auto &b)
 {
-    if(cond)
-    {
-        int t=a;
-        a = b;
-        b = t;
-    }
+    auto t=a;
+    a = b;
+    b = t;
 }
