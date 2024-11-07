@@ -15,8 +15,8 @@ int main()
     
     while(v[pos]!=nr && f-s>=2)
     {
-        if(v[pos]>nr) f = (s+f)/2;
-        else if(v[pos]<nr) s = (s+f)/2;
+        if(v[pos]>nr) f = pos;
+        else if(v[pos]<nr) s = pos;
         pos = (s+f)/2;
     }
 
