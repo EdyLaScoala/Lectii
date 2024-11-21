@@ -38,7 +38,7 @@ int main()
     for(int i=1; i<=n; i++) for(int j=1; j<=n; j++) fin >> v[i][j];
     int minim = v[1][1], maxim = v[1][1];
     dei(1, n, 1, n);
-    cout << endl << endl;
+    cout << endl << endl;   
     for(int i=1; i<=n; i++)
     {
         for(int j=1; j<=n; j++) cout << v[i][j] << " ";
