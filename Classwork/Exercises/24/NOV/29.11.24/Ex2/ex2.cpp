@@ -17,27 +17,14 @@ void merge(int s, int d, int m)
     int i=s, j=m+1, k=1, v2[100];
     while(i<=m && j<=d)
     {
-        if(v[i]<v[j])
-        {
-            v2[k] = v[i];
-            i++;
-        }
-        else
+        if(v[i]<v[j]) v2[k] = v[i];
+        if(v[i]%2>v[j]%2) v2[k] = v[i]; 
+        if(v[i]>=v[j])
         {
             v2[k] = v[j];
             j++;
         }
-        if(v[i]%2>v[j]%2)
-        {
-            v2[k] = v[i];
-            i++;
-        }
-        else
-        {
-            v2[k] = v[j];
-            j++;
-        }
-        
+        else i++;
         k++;
     }
     if(i<=m)
