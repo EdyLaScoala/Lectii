@@ -8,14 +8,13 @@ int v[100][100];
 int main()
 {
     ifstream fin("date.in");
-    int a, b, n, str, n2;
-    fin >> n >> str;
-    while(fin >> a)
+    int a, b, n=0;
+    while(fin >> a >> b)
     {
-        fin >> b;
-        cout << a << " " << b << endl;
         v[a][b] = 1;
         v[b][a] = 1;
+        n = max(n, a);
+        n = max(n, b);
     }
     for(int i=1; i<=n; i++)
     {
