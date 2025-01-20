@@ -28,7 +28,7 @@ def createGraph():
     plt.show()
 
 root = tk.Tk()
-helloLabel = tk.Label(root, text="Please enter th nodes.").grid(column=1, row=1)
+helloLabel = tk.Label(root, text="Please enter the nodes.").grid(column=1, row=1)
 xEntry = tk.Entry(root)
 xEntry.grid(column=1, row=2)
 yEntry = tk.Entry(root)
