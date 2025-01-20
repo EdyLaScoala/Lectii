@@ -58,8 +58,6 @@ int main()
 {
     fin >> n;
     for(int i=1; i<=n; i++) for(int j=1; j<=n; j++) fin >> v[i][j];
-    cin >> x >> y;
-    st[1]=x;
-    bt(n);
+    for(int i=x; x<=n; x++) for(int y=1; x<=n; x++) if(x!=y) st[1] = x, bt(n);
     if(!este) cout << "Nu este";
 }
