@@ -30,3 +30,5 @@ hw:
 test:
 	@read -p "Enter the test number: " EXERCISE_NUMBER; \
 	$(GENERATOR_DIR)/$(TEST_SCRIPT) "$$EXERCISE_NUMBER"
+
+# CiJs_rA_HR3xFcK
