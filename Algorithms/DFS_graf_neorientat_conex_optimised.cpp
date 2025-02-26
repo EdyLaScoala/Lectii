@@ -36,7 +36,7 @@ int nonVisitedNodesExist()
 void searchNode(int node)
 {
     visited[node] = 1;
-    cout << node << " ";
+    //cout << node << " ";
     for(int i=node/2; i<=n; i++) if(v[node][i] == 1 && visited[i] == 0) searchNode(i);
 }
 
