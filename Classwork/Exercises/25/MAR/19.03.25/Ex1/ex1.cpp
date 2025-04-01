@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int a[100][100], d[100], s[100], p[100], n;
+int a[100][100], d[100], s[100], p[100], n, m;
 int const MAX = 5000;
 
 ifstream fin("date.in");
@@ -13,7 +13,7 @@ ifstream fin("date.in");
 void init()
 {
     int i, j;
-    fin >> n;
+    fin >> n >> m;
     for(i = 1; i <= n; i++)
         for(j = 1; j <= n; j++)
             if(i == j)
@@ -25,8 +25,11 @@ void init()
 void citire()
 {
     int i, j, c;
-    while(fin >> i >> j >> c)
+    for(int k=1; k<=m; k++)
+    {
+        fin >> i >> j >> c;
         a[i][j] = c;
+    }
 }
 
 void generare_drum(int x)
@@ -39,7 +42,7 @@ void generare_drum(int x)
         if(i != x && d[i] < MAX)
             p[i] = x;
     }
-    for(i = 1; i < n; i++) // Fix the loop condition to avoid segmentation fault
+    for(i = 1; i < n; i++)
     {
         for(j = 1, min = MAX; j <= n; j++)
             if(!s[j] && d[j] < min)
@@ -64,7 +67,7 @@ void drum(int x)
     cout << x << " ";
 }   
 
-void afisare(int x, int y) 
+int afisare(int x, int y) 
 {
     if (p[y] != 0) 
     {
@@ -77,19 +80,28 @@ void afisare(int x, int y)
     {
         cout << "Nu exista drum de la " << x << " la " << y << endl;
     }
+    return d[y];
 }
 
 int main()
 {
-    int start, finish;
+    int valori[100] = {0};
+    int romeo, julieta;
+    cin >> romeo >> julieta;
     init();
     citire();
-    cout << "Introduceti nodul de start: ";
-    cin >> start;
-    cout << "Introduceti nodul de finish: ";
-    cin >> finish;
-    generare_drum(start);
-    afisare(start, finish);
+    for(int i=1; i<=n; i++)
+    {
+        generare_drum(romeo);
+        valori[i] += afisare(romeo, i);
+        generare_drum(julieta);
+        valori[i] += afisare(julieta, i);
+    }
+    int min = MAX;
+    for(int i=2; i<=n; i++)
+        if(valori[i] < min && valori[i] != 0)
+            min = valori[i];
+    cout << "Intersectia optima este: " << min << endl;
     return 0;
 }
 
